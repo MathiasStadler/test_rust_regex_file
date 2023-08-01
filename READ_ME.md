@@ -29,7 +29,7 @@ fn main() {
     }
 }
 
-// The output is wrapped in a Result to allow matching on errors
+// The output is wrapped cat <<EOT >> ./examples/first_read_line.rsin a Result to allow matching on errors
 // Returns an Iterator to the Reader of the lines of the file.
 fn read_lines<P>(filename: P) -> io::Result<io::Lines<io::BufReader<File>>>
 where P: AsRef<Path>, {
@@ -38,5 +38,50 @@ where P: AsRef<Path>, {
 }
 EOT
 ```
+
+## [How to Write Tests](https://doc.rust-lang.org/book/ch11-01-writing-tests.html)
+
+- Add this to first_read_line.rs
+
+```bash
+cat <<EOT >> ./examples/first_read_line.rs
+
+#[cfg(test)]
+mod tests {
+    #[test]
+    fn it_works() {
+        let result = 2 + 2;
+        assert_eq!(result, 4);
+    }
+}
+EOT
+```
+
+## Now run all test in subfolder examples
+
+```bash
+cargo test --examples
+```
+> output
+
+```shell
+trapapa@trapapa-ThinkPad-T430:~/test_rust_regex_file$ cargo test --examples
+   Compiling test_rust_regex_file v0.1.0 (/home/trapapa/test_rust_regex_file)
+    Finished test [unoptimized + debuginfo] target(s) in 0.34s
+     Running unittests examples/first_read_line.rs (target/debug/examples/first_read_line-991179279f279ee9)
+
+running 1 test
+test tests::it_works ... ok
+
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running unittests examples/hello_examples.rs (target/debug/examples/hello_examples-37289ea276810f8a)
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+```
+
+
 
 ## delete all empty line in the document
