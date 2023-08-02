@@ -85,7 +85,7 @@ test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; fini
 
 ## test grov [from here](https://github.com/mozilla/grcov#how-to-get-grcov)
 
-0. install grov
+0. install grcov
 
     ```bash
     cargo install grcov
@@ -183,3 +183,6 @@ cargo flamegraph --release
 - flamegraph
 - signal_hook
 - is_terminal
+
+## remove empty lines from vector
+https://github.com/mozilla/grcov/blob/master/src/lib.rs

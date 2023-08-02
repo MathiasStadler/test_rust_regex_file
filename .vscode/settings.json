@@ -3,6 +3,7 @@
         "Ccodegen",
         "Coverflow",
         "Cpanic",
+        "debuginfo",
         "flamegraph",
         "grcov",
         "grov",
@@ -13,6 +14,7 @@
         "RUSTDOCFLAGS",
         "RUSTFLAGS",
         "trapapa",
+        "unittests",
         "weiter",
         "xtask",
         "Zpanic"
