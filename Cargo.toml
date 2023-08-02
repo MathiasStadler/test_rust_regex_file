@@ -9,3 +9,6 @@ edition = "2021"
 
 [[example]]
 name='hello_examples'
+
+[profile.release]
+debug = true
