@@ -97,3 +97,6 @@ test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; fini
 
 ## remove empty lines from vector
 https://github.com/mozilla/grcov/blob/master/src/lib.rs
+
+## HIER WEITER
+/home/trapapa/test_rust_regex_file/examples/test_setup_teardown.rs
