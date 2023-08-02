@@ -84,7 +84,40 @@ test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; fini
 
 ## test grov [from here](https://github.com/mozilla/grcov#how-to-get-grcov)
 
+1. make project clean
+
+    ```bash
+    cargo clean
+    ```
+2. export variable into shell
+
+    ```bash
+    export CARGO_INCREMENTAL=0
+    export RUSTFLAGS="-Zprofile -Ccodegen-units=1 -Copt-level=0 -Clink-dead-code -Coverflow-checks=off -Zpanic_abort_tests -Cpanic=abort"
+    export RUSTDOCFLAGS="-Cpanic=abort"
+    ```
+
+3. build project
+
+    ```bash
+    cargo build
+    ```
+
+4. run test in folder examples src files
+
+    ```bash
+    cargo test --examples
+    ```
+
+5. create code coverage report in html
+
+    ```bash
+    grcov . -s . --binary-path ./target/debug/ -t html --branch --ignore-not-existing -o ./target/debug/coverage/
+    ```
+
 ## delete all empty line in the document
 
-HIER weiter
-https://github.com/mozilla/grcov#how-to-get-grcov
+- HIER weiter
+  - https://github.com/mozilla/rcov#how-to-get-grcov
+
+- flamegraph

@@ -1,9 +1,19 @@
 {
     "cSpell.words": [
+        "Ccodegen",
+        "Coverflow",
+        "Cpanic",
+        "flamegraph",
+        "grcov",
         "grov",
+        "HIER",
         "inxi",
         "println",
         "Procs",
-        "trapapa"
+        "RUSTDOCFLAGS",
+        "RUSTFLAGS",
+        "trapapa",
+        "weiter",
+        "Zpanic"
     ]
 }
